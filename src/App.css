@@ -1,38 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
 .App {
-  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-bar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  border: 3px solid #00B4CC;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-bar input::placeholder {
+  font-size: 20px; /* Adjust font size as needed */
+  color: #888; /* Optional: change the color of the placeholder text */
+  font-family: Arial, sans-serif; /* Optional: change font family */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-bar input {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  border: none;
+}
+
+.add-book-form-container {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  border: 3px solid #00B4CC;
+  margin-top: 50px;
   align-items: center;
+  padding: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+.add-book-form {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  gap: 10px;
+}
+
+.add-book-form input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0px 20px;
+  border: 1px solid #00B4CC;
+  border-radius: 5px;
+}
+
+.form-submit-button {
+  height: 40px;
+  width: 150px;
+  border: 1px solid #00B4CC;
+  background-color: #00B4CC;
+}
+
+.book-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  border: 3px solid #00B4CC;
+  margin-top: 50px;
+}
+
+.filter-container {
+  height: 30px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book-item-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  border-top: 3px solid #00B4CC;
+  width: 100%;
+  padding: 10px;
+}
+
+.sort-books-filter {
+  height: 25px;
+  width: 100px;
+  border: 3px solid #00B4CC;
+}
+
+.book-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  width: calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  width: 100%;
+  gap: 20px;
+}
+
+.pagination button{
+  background-color: #007bff;
+  border: 1px solid #007bff;
   color: white;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination button.active {
+  background-color: #0056b3;
+  border-color: #0056b3;
 }
